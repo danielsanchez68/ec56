@@ -1,0 +1,44 @@
+{{#if productos.length}}
+    <table>
+        <tr>
+            {{!-- <th>ID</th> --}}
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Marca</th>
+            <th>Categoría</th>
+            <th>Detalles</th>
+            <th>Foto</th>
+            <th>Envío</th>
+            <th>Acción</th>
+        </tr>
+
+        {{#each productos}}
+        <tr>
+            {{!-- <td>{{id}}</td> --}}
+            <td>{{nombre}}</td>
+            <td>{{precio}}</td>
+            <td>{{stock}}</td>
+            <td>{{marca}}</td>
+            <td>{{categoria}}</td>
+            <td>{{detalles}}</td>
+            <td>
+                <img src="{{foto}}" width="50" alt="{{nombre}}">
+            </td>
+            {{#if envio}}
+                <td>Si</td>
+            {{else}}
+                <td>No</td>
+            {{/if}}
+            <td>
+                <button onclick="productosController.actualizarProducto('{{id}}')">Actualizar</button>
+                <button onclick="productosController.borrarProducto('{{id}}')">Borrar</button>
+            </td>
+
+        </tr>
+        {{/each}}
+
+    </table>
+{{else}}
+    <h3>No se encontraron productos</h3>
+{{/if}}

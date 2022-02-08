@@ -1,0 +1,86 @@
+<section class="section-alta">
+
+    <header class="section-alta__header">
+        <h1>Alta</h1>
+
+    </header>
+    <br>
+    <br>
+
+    <div class="alta-container">
+
+        <form class="alta-form" autocomplete="off">
+            <div class="input-group">
+                <label for="nombre">Nombre:</label>
+                <input name="nombre" id="nombre">
+                <div class="error-detail"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="precio">Precio:</label>
+                <input name="precio" id="precio">
+                <div class="error-detail"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="stock">Stock:</label>
+                <input name="stock" id="stock">
+                <div class="error-detail"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="marca">Marca:</label>
+                <input name="marca" id="marca">
+                <div class="error-detail"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="categoria">Categoría:</label>
+                <input name="categoria" id="categoria">
+                <div class="error-detail"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="detalles">Detalles:</label>
+                <input name="detalles" id="detalles">
+                <div class="error-detail"></div>
+            </div>
+
+            <!-- <div class="input-group">
+                <label for="foto">Foto:</label>
+                <input name="foto" id="foto">
+                <div class="error-detail"></div>
+            </div> -->
+
+            <div id="drop-area">
+                <p>Subir imágen al servidor con <b>file dialog</b> ó con <b>drag and drop</b> dentro del área punteada</p>
+                <br>
+    
+                <input id="foto" type="file" accept="image/*" onchange="handleFiles(this.files)">
+                <label class="button" for="foto">File dialog</label>
+                <br><br>
+    
+                <progress id="progress-bar" max="100" value="0"></progress>
+                <div id="gallery"><img src="" alt=""></div>
+            </div>
+
+            <div class="input-group">
+                <input name="envio" id="envio" type="checkbox">
+                <label for="envio">Envío</label>
+                <div class="error-detail"></div>
+            </div>
+
+            <button>Agregar</button>
+        </form>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2>Lista de productos disponibles</h2>
+    <br>
+
+    <div class="listado-productos"></div>
+
+</section>
